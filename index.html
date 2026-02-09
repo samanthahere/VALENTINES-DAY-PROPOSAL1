@@ -149,16 +149,27 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        .hugging-teddies {
-            font-size: 120px;
-            margin: 20px 0;
-            display: inline-block;
-            animation: hug 2s ease-in-out infinite;
+        .hugging-gif {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 20px;
+            animation: popIn 0.6s ease-out;
         }
 
-        @keyframes hug {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        @keyframes popIn {
+            0% { 
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .celebration {
@@ -229,7 +240,7 @@
         </div>
 
         <div class="success" id="success">
-            <div class="hugging-teddies">🤗🧸🧸🤗</div>
+            <img src="https://media.giphy.com/media/KztT2c4u8mYYUiMKdJ/giphy.gif" alt="Hugging" class="hugging-gif">
             <div class="celebration">🎉 ✨ 🎊 ✨ 🎉</div>
             <div class="love-message">WOOOOO!!! I love you so much! 💖</div>
             <div class="celebration">🌹 💐 🌸 💐 🌹</div>
